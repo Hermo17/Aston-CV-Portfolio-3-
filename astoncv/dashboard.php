@@ -7,7 +7,7 @@ require 'db.php';
 
 require 'auth_check.php';
 
-// SECURITY method no 7: CSRF Protection via Tokens
+// SECURITY CSRF Protection via Tokens
 if (empty($_SESSION["csrf_token"])) {
     $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
 }
